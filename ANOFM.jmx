@@ -177,13 +177,49 @@ vars.putObject(&quot;jobList&quot;,jobList);</stringProp>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="www.anofm.ro" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="offset" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">offset</stringProp>
+                </elementProp>
+                <elementProp name="cauta" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">cauta</stringProp>
+                </elementProp>
+                <elementProp name="select" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">select</stringProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">8</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                </elementProp>
+                <elementProp name="localitate" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">localitate</stringProp>
+                </elementProp>
+              </collectionProp>
             </elementProp>
             <stringProp name="HTTPSampler.domain">www.anofm.ro</stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/dmxConnect/api/oferte_bos/oferte_bos_query2L_Nou.php?offset=&amp;cauta=&amp;select=&amp;limit=&amp;localitate=</stringProp>
+            <stringProp name="HTTPSampler.path">/dmxConnect/api/oferte_bos/oferte_bos_query2L_Nou.php</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -263,14 +299,14 @@ vars.putObject(&quot;jobList&quot;,jobList);</stringProp>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="TestPlan.comments">${__jexl3(${total}/8+1,)}</stringProp>
-            <stringProp name="LoopController.loops">${__jexl3(${total}/8+1,)}</stringProp>
+            <stringProp name="TestPlan.comments">${__jexl3(${total}/8-1,)}</stringProp>
+            <stringProp name="LoopController.loops">${__jexl3(${total}/8-1,)}</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.start">0</stringProp>
               <stringProp name="CounterConfig.end"></stringProp>
-              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.incr">8</stringProp>
               <stringProp name="CounterConfig.name">i</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
               <boolProp name="CounterConfig.per_user">false</boolProp>
@@ -278,13 +314,49 @@ vars.putObject(&quot;jobList&quot;,jobList);</stringProp>
             <hashTree/>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="www.anofm.ro" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-                <collectionProp name="Arguments.arguments"/>
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="offset" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${i}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">offset</stringProp>
+                  </elementProp>
+                  <elementProp name="cauta" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">cauta</stringProp>
+                  </elementProp>
+                  <elementProp name="select" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">select</stringProp>
+                  </elementProp>
+                  <elementProp name="limit" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">8</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">limit</stringProp>
+                  </elementProp>
+                  <elementProp name="localitate" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">localitate</stringProp>
+                  </elementProp>
+                </collectionProp>
               </elementProp>
               <stringProp name="HTTPSampler.domain">www.anofm.ro</stringProp>
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">/dmxConnect/api/oferte_bos/oferte_bos_query2L_Nou.php?offset=${i}&amp;cauta=&amp;select=&amp;limit=&amp;localitate=</stringProp>
+              <stringProp name="HTTPSampler.path">/dmxConnect/api/oferte_bos/oferte_bos_query2L_Nou.php</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
