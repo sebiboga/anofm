@@ -47,7 +47,7 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="zimbor.go.ro:8985" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="zimbor.go.ro:8985" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -151,7 +151,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="zimbor.go.ro" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PROD zimbor.go.ro" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -377,6 +377,10 @@
               <stringProp name="JMESExtractor.matchNumber">1</stringProp>
             </JMESPathExtractor>
             <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">300</stringProp>
+            </ConstantTimer>
+            <hashTree/>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -531,6 +535,10 @@
                   <stringProp name="scriptLanguage">groovy</stringProp>
                 </JSR223PostProcessor>
                 <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">500</stringProp>
+                </ConstantTimer>
+                <hashTree/>
               </hashTree>
             </hashTree>
             <kg.apc.jmeter.samplers.DummySampler guiclass="kg.apc.jmeter.samplers.DummySamplerGui" testclass="kg.apc.jmeter.samplers.DummySampler" testname="extrage ids-urile in conditiile in care sigur ANOFM a raspuns cu success" enabled="true">
@@ -645,8 +653,8 @@
                       <stringProp name="TestPlan.comments">Created from cURL on 2024-04-30T21:06:51.339</stringProp>
                     </HeaderManager>
                     <hashTree/>
-                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
-                      <stringProp name="ConstantTimer.delay">10</stringProp>
+                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                      <stringProp name="ConstantTimer.delay">300</stringProp>
                     </ConstantTimer>
                     <hashTree/>
                     <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -874,7 +882,7 @@ def prodjob = [:]
 var county =  vars.get(&quot;COUNTY&quot;);
 var company =  vars.get(&quot;CF&quot;);
 thisjob[&apos;title&apos;] = vars.get(&quot;ocupatie&quot;);
-thisjob[&apos;url&apos;] = &quot;https://www.anofm.ro/dmxConnect/api/oferte_bos/detalii_lmv_test.php?id_lmv=&quot;+id;
+thisjob[&apos;url&apos;] = &quot;https://www.anofm.ro/lmvw.html?agentie=ANOFM&amp;categ=3&amp;subcateg=1&amp;id_lmv=&quot;+id;
 thisjob[&apos;id&apos;] = MessageDigest.getInstance(&apos;MD5&apos;).digest(thisjob[&apos;url&apos;].bytes).encodeHex().toString()
 thisjob[&apos;jobLocation.address.county&apos;] = vars.get(&quot;COUNTY&quot;);
 thisjob[&apos;jobLocation.address.city&apos;] = vars.get(&quot;ADRESA_LOCALITATEA&quot;);
@@ -893,7 +901,7 @@ thisjob[&apos;sursa&apos;] = &apos;https://www.anofm.ro&apos; ;
 prodjob[&quot;id&quot;]= thisjob[&apos;id&apos;] ;
 prodjob[&quot;job_title&quot;]= thisjob[&apos;title&apos;];
 prodjob[&quot;job_link&quot;]= thisjob[&apos;url&apos;];
-prodjob[&quot;company&quot;]= thisjob[&apos;hiringOrganization.cui&apos;];
+prodjob[&quot;company&quot;]= thisjob[&apos;hiringOrganization.name&apos;];
 prodjob[&quot;country&quot;]= &quot;România&quot;;
 prodjob[&quot;city&quot;]= thisjob[&apos;jobLocation.address.city&apos;];
 prodjob[&quot;county&quot;]= thisjob[&apos;jobLocation.address.county&apos;];
@@ -922,7 +930,7 @@ vars.putObject(&quot;jobList&quot;, jobList)
                 <hashTree/>
                 <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="TEST" enabled="true"/>
                 <hashTree>
-                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="zimbor.go.ro" enabled="true">
+                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TEST zimbor.go.ro" enabled="true">
                     <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
                     <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                       <collectionProp name="Arguments.arguments">
@@ -1029,7 +1037,7 @@ vars.putObject(&quot;jobList&quot;, jobList)
                 </hashTree>
                 <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="PROD" enabled="true"/>
                 <hashTree>
-                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="zimbor.go.ro" enabled="true">
+                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PROD zimbor.go.ro" enabled="true">
                     <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
                     <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                       <collectionProp name="Arguments.arguments">
