@@ -750,7 +750,7 @@ vars.put(&quot;list&quot;, q)</stringProp>
             </JMESPathExtractor>
             <hashTree/>
             <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">300</stringProp>
+              <stringProp name="ConstantTimer.delay">10</stringProp>
             </ConstantTimer>
             <hashTree/>
           </hashTree>
@@ -908,7 +908,7 @@ vars.put(&quot;list&quot;, q)</stringProp>
                 </JSR223PostProcessor>
                 <hashTree/>
                 <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-                  <stringProp name="ConstantTimer.delay">500</stringProp>
+                  <stringProp name="ConstantTimer.delay">300</stringProp>
                 </ConstantTimer>
                 <hashTree/>
               </hashTree>
@@ -1024,47 +1024,6 @@ vars.put(&quot;list&quot;, q)</stringProp>
                       </collectionProp>
                       <stringProp name="TestPlan.comments">Created from cURL on 2024-04-30T21:06:51.339</stringProp>
                     </HeaderManager>
-                    <hashTree/>
-                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-                      <stringProp name="ConstantTimer.delay">300</stringProp>
-                    </ConstantTimer>
-                    <hashTree/>
-                    <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-                      <boolProp name="ResultCollector.error_logging">true</boolProp>
-                      <objProp>
-                        <name>saveConfig</name>
-                        <value class="SampleSaveConfiguration">
-                          <time>true</time>
-                          <latency>true</latency>
-                          <timestamp>true</timestamp>
-                          <success>true</success>
-                          <label>true</label>
-                          <code>true</code>
-                          <message>true</message>
-                          <threadName>true</threadName>
-                          <dataType>true</dataType>
-                          <encoding>false</encoding>
-                          <assertions>true</assertions>
-                          <subresults>true</subresults>
-                          <responseData>false</responseData>
-                          <samplerData>false</samplerData>
-                          <xml>false</xml>
-                          <fieldNames>true</fieldNames>
-                          <responseHeaders>false</responseHeaders>
-                          <requestHeaders>false</requestHeaders>
-                          <responseDataOnError>false</responseDataOnError>
-                          <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                          <assertionsResultsToSave>0</assertionsResultsToSave>
-                          <bytes>true</bytes>
-                          <sentBytes>true</sentBytes>
-                          <url>true</url>
-                          <threadCounts>true</threadCounts>
-                          <idleTime>true</idleTime>
-                          <connectTime>true</connectTime>
-                        </value>
-                      </objProp>
-                      <stringProp name="filename"></stringProp>
-                    </ResultCollector>
                     <hashTree/>
                     <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
                       <stringProp name="cacheKey">true</stringProp>
@@ -1369,43 +1328,6 @@ vars.putObject(&quot;jobList&quot;, jobList)
                     </HeaderManager>
                     <hashTree/>
                   </hashTree>
-                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-                    <boolProp name="ResultCollector.error_logging">true</boolProp>
-                    <objProp>
-                      <name>saveConfig</name>
-                      <value class="SampleSaveConfiguration">
-                        <time>true</time>
-                        <latency>true</latency>
-                        <timestamp>true</timestamp>
-                        <success>true</success>
-                        <label>true</label>
-                        <code>true</code>
-                        <message>true</message>
-                        <threadName>true</threadName>
-                        <dataType>true</dataType>
-                        <encoding>false</encoding>
-                        <assertions>true</assertions>
-                        <subresults>true</subresults>
-                        <responseData>false</responseData>
-                        <samplerData>false</samplerData>
-                        <xml>false</xml>
-                        <fieldNames>true</fieldNames>
-                        <responseHeaders>false</responseHeaders>
-                        <requestHeaders>false</requestHeaders>
-                        <responseDataOnError>false</responseDataOnError>
-                        <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                        <assertionsResultsToSave>0</assertionsResultsToSave>
-                        <bytes>true</bytes>
-                        <sentBytes>true</sentBytes>
-                        <url>true</url>
-                        <threadCounts>true</threadCounts>
-                        <idleTime>true</idleTime>
-                        <connectTime>true</connectTime>
-                      </value>
-                    </objProp>
-                    <stringProp name="filename"></stringProp>
-                  </ResultCollector>
-                  <hashTree/>
                 </hashTree>
                 <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="PROD" enabled="true"/>
                 <hashTree>
@@ -1476,43 +1398,6 @@ vars.putObject(&quot;jobList&quot;, jobList)
                     </HeaderManager>
                     <hashTree/>
                   </hashTree>
-                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-                    <boolProp name="ResultCollector.error_logging">true</boolProp>
-                    <objProp>
-                      <name>saveConfig</name>
-                      <value class="SampleSaveConfiguration">
-                        <time>true</time>
-                        <latency>true</latency>
-                        <timestamp>true</timestamp>
-                        <success>true</success>
-                        <label>true</label>
-                        <code>true</code>
-                        <message>true</message>
-                        <threadName>true</threadName>
-                        <dataType>true</dataType>
-                        <encoding>false</encoding>
-                        <assertions>true</assertions>
-                        <subresults>true</subresults>
-                        <responseData>false</responseData>
-                        <samplerData>false</samplerData>
-                        <xml>false</xml>
-                        <fieldNames>true</fieldNames>
-                        <responseHeaders>false</responseHeaders>
-                        <requestHeaders>false</requestHeaders>
-                        <responseDataOnError>false</responseDataOnError>
-                        <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                        <assertionsResultsToSave>0</assertionsResultsToSave>
-                        <bytes>true</bytes>
-                        <sentBytes>true</sentBytes>
-                        <url>true</url>
-                        <threadCounts>true</threadCounts>
-                        <idleTime>true</idleTime>
-                        <connectTime>true</connectTime>
-                      </value>
-                    </objProp>
-                    <stringProp name="filename"></stringProp>
-                  </ResultCollector>
-                  <hashTree/>
                 </hashTree>
               </hashTree>
             </hashTree>
