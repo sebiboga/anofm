@@ -1,0 +1,19 @@
+name: Auto-commit workflow
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Commit and push
+        run: |
+          echo $(date -u) "Keep alive commit" >> ./keepalive.txt
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Keep alive commit"
+          git push
