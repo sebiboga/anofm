@@ -19,9 +19,15 @@ jobs:
           echo "Environment: ${{ github.event.inputs.environment }}"
           echo "Version: ${{ github.event.inputs.version }}"
 
-  deploy:
+  validate:
     runs-on: ubuntu-latest
-    needs: test  # only run this job after 'test' job has completed
+    steps:
+      - name: Print Version
+        run: echo "The version is ${{ github.event.inputs.version }}"
+
+  deploy:
+    needs: [test, validate]
+    runs-on: ubuntu-latest
     steps:
       - name: Print Environment
         run: echo "The environment is ${{ github.event.inputs.environment }}"
