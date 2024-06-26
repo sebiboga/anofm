@@ -26,7 +26,6 @@ jobs:
         run: echo "The version is ${{ github.event.inputs.version }}"
 
   deploy:
-    needs: [test, validate]
     runs-on: ubuntu-latest
     steps:
       - name: Print Environment
