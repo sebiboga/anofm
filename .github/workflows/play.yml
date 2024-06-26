@@ -11,7 +11,7 @@ on:
         required: true
 
 jobs:
-  test:
+  automation-testing:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
